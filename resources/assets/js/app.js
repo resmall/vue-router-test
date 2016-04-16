@@ -17,11 +17,10 @@ var People = Vue.extend({
 });
 
 router.map({
-    '/': {
-        component: Home
-    },
-    '/people': {
-        component: People
+    '/people/:personId': {
+        component: {
+            template: 'O id da pessoa é {{$route.params.personId}}'
+        }
     }
 });
 
