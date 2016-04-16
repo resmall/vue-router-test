@@ -12573,7 +12573,15 @@ var VueRouter = require('vue-router');
 
 Vue.use(VueRouter);
 
-var App = Vue.extend({});
+var App = Vue.extend({
+    methods: {
+        triggerGo: function triggerGo() {
+            setTimeout(function () {
+                router.go({ name: 'people.show', params: { personId: 5 } });
+            }, 3000);
+        }
+    }
+});
 
 var router = new VueRouter();
 
@@ -12584,10 +12592,6 @@ var Home = Vue.extend({
 
 var People = Vue.extend({
     template: 'Veja todas as pessoas que trabalham aqui!'
-});
-
-var PeopleID = Vue.extend({
-    template: 'O id da pessoa é {{$route.params.personId}}'
 });
 
 router.map({

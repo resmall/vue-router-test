@@ -8,6 +8,8 @@
         <li><a v-link="{ path: '/people/a/b/c/d/baz' }">Greedy com final /people/a/b/c/d/baz</a></li>
     </ul>
 
+    <button v-on:click="triggerGo">Em 3 segundos vai pra outra seção</button>
+
     {{--Conteúdo carregado pelo router view do vue router--}}
     <router-view></router-view>
 </div>

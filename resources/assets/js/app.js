@@ -3,7 +3,15 @@ var VueRouter = require('vue-router');
 
 Vue.use(VueRouter);
 
-var App = Vue.extend({});
+var App = Vue.extend({
+    methods: {
+        triggerGo: function () {
+            setTimeout(function() {
+                router.go({ name: 'people.show', params : { personId: 5 }})
+            }, 3000);
+        }
+    }
+});
 
 var router = new VueRouter();
 
