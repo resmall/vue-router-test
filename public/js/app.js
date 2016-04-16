@@ -12587,6 +12587,16 @@ var People = Vue.extend({
 });
 
 router.map({
+    '/people/*greedy': {
+        component: {
+            template: 'Usando greedy aceita /people/a/b/c/ ... {{$route.params.greedy}} .' + "Experimente acrescentar outras seções na url"
+        }
+    },
+    '/people/*greedy/baz': {
+        component: {
+            template: 'Usando greedy aceita /people/a/b/c/baz ... {{$route.params.greedy}} .' + 'Experimente acrescentar mais seções na variável, antes de /baz'
+        }
+    },
     '/people/:personId': {
         component: {
             template: 'O id da pessoa é {{$route.params.personId}}'

@@ -3,6 +3,8 @@
     <ul class="navigation">
         <li><a v-link="{ path: '/people' }">Pessoas</a></li>
         <li><a v-link="{ path: '/people/2' }">ID no parametro</a></li>
+        <li><a v-link="{ path: '/people/a/b/c/d/' }">Greedy infinito /people/a/b/c/d/</a></li>
+        <li><a v-link="{ path: '/people/a/b/c/d/baz' }">Greedy com final /people/a/b/c/d/baz</a></li>
     </ul>
 
     <router-view></router-view>
