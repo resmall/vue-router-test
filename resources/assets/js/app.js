@@ -30,6 +30,7 @@ router.map({
         }
     },
     '/people/:personId': {
+        name: 'people.show', // Named routes, like in Laravel
         component: {
             template: 'O id da pessoa é {{$route.params.personId}}'
         }

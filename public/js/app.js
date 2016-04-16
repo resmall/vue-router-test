@@ -12586,6 +12586,10 @@ var People = Vue.extend({
     template: 'Veja todas as pessoas que trabalham aqui!'
 });
 
+var PeopleID = Vue.extend({
+    template: 'O id da pessoa é {{$route.params.personId}}'
+});
+
 router.map({
     '/people/*greedy': {
         component: {
@@ -12598,6 +12602,7 @@ router.map({
         }
     },
     '/people/:personId': {
+        name: 'people.show', // Named routes, like in Laravel
         component: {
             template: 'O id da pessoa é {{$route.params.personId}}'
         }
